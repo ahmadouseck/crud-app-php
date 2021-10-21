@@ -1,17 +1,14 @@
 <?php
-$dsn = 'msql:host= localhost;dbname=company';
+$dsn = 'mysql:host=localhost;dbname=company';
 
 $username = 'root';
 $password = '';
-
 $options = [];
-
 
 try{
 
-    $connection = new  PDO($dsn,$username,$password,$options);
-    echo 'connexion reussie';  
+    $connection = new PDO($dsn, $username, $password, $options);
 }catch(PDOException $e ){
-    echo 'echec de la connexion';
+      echo 'echec de la connexion';
 
-}
+} 

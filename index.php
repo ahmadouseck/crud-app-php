@@ -34,9 +34,9 @@ $people = $statement->fetchAll(PDO::FETCH_OBJ);
                 <td><?= $person->name; ?></td>
                 <td><?= $person->email; ?></td>
                 <td>
-                    <a href="edit.php?id=<?= $person->id ?>" class="btn btn-info">Edit<ion-icon name="create-outline"></ion-icon></a>
-                    <a onclick ="return confirm('Etes vous sur de supprimer?')" href="delete.php?id=<?= $person->id ?>" class="btn btn-danger">Delete
-                    <ion-icon name="trash-outline"></ion-icon></a>
+                    <a href="edit.php?id=<?= $person->id ?>" class="btn btn-info"><i class="bi bi-pencil-square"></i></a>
+                    <a onclick ="return confirm('Etes vous sur de supprimer?')" href="delete.php?id=<?= $person->id ?>" class="btn btn-danger">
+                    <i class="bi bi-trash"></i></a>
                 </td>
             </tr>
         <?php endforeach; ?>
